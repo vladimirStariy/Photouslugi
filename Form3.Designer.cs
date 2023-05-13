@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
             this.фотоуслугиDataSet = new Фотоуслуги.ФотоуслугиDataSet();
             this.zakazBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.zakazTableAdapter = new Фотоуслуги.ФотоуслугиDataSetTableAdapters.zakazTableAdapter();
@@ -176,14 +176,14 @@
             this.UslugaDataGrid.AllowUserToDeleteRows = false;
             this.UslugaDataGrid.BackgroundColor = System.Drawing.Color.Lavender;
             this.UslugaDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.UslugaDataGrid.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.UslugaDataGrid.DefaultCellStyle = dataGridViewCellStyle25;
             this.UslugaDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.UslugaDataGrid.Location = new System.Drawing.Point(3, 28);
             this.UslugaDataGrid.Name = "UslugaDataGrid";
@@ -234,6 +234,7 @@
             this.UslugaUpdateButton.Name = "UslugaUpdateButton";
             this.UslugaUpdateButton.Size = new System.Drawing.Size(23, 22);
             this.UslugaUpdateButton.Text = "toolStripButton9";
+            this.UslugaUpdateButton.Click += new System.EventHandler(this.UslugaUpdateButton_Click);
             // 
             // UslugaDeleteButton
             // 
@@ -243,6 +244,7 @@
             this.UslugaDeleteButton.Name = "UslugaDeleteButton";
             this.UslugaDeleteButton.Size = new System.Drawing.Size(23, 22);
             this.UslugaDeleteButton.Text = "toolStripButton8";
+            this.UslugaDeleteButton.Click += new System.EventHandler(this.UslugaDeleteButton_Click);
             // 
             // toolStripSeparator2
             // 
@@ -292,14 +294,14 @@
             this.OrderDataGrid.AllowUserToDeleteRows = false;
             this.OrderDataGrid.BackgroundColor = System.Drawing.Color.Lavender;
             this.OrderDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.OrderDataGrid.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.OrderDataGrid.DefaultCellStyle = dataGridViewCellStyle26;
             this.OrderDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.OrderDataGrid.GridColor = System.Drawing.Color.Lavender;
             this.OrderDataGrid.Location = new System.Drawing.Point(3, 28);
@@ -361,6 +363,7 @@
             this.OrderDeleteButton.Name = "OrderDeleteButton";
             this.OrderDeleteButton.Size = new System.Drawing.Size(23, 22);
             this.OrderDeleteButton.Text = "toolStripButton8";
+            this.OrderDeleteButton.Click += new System.EventHandler(this.OrderDeleteButton_Click);
             // 
             // toolStripSeparator1
             // 
@@ -417,14 +420,14 @@
             this.KlientDataGrid.AllowUserToAddRows = false;
             this.KlientDataGrid.AllowUserToDeleteRows = false;
             this.KlientDataGrid.BackgroundColor = System.Drawing.Color.Lavender;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.KlientDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.KlientDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
             this.KlientDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.KlientDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.KlientDataGrid.Location = new System.Drawing.Point(3, 28);
@@ -481,6 +484,7 @@
             this.ClientUpdateButton.Name = "ClientUpdateButton";
             this.ClientUpdateButton.Size = new System.Drawing.Size(23, 22);
             this.ClientUpdateButton.Text = "toolStripButton9";
+            this.ClientUpdateButton.Click += new System.EventHandler(this.ClientUpdateButton_Click);
             // 
             // ClientDeleteButton
             // 
@@ -490,6 +494,7 @@
             this.ClientDeleteButton.Name = "ClientDeleteButton";
             this.ClientDeleteButton.Size = new System.Drawing.Size(23, 22);
             this.ClientDeleteButton.Text = "toolStripButton8";
+            this.ClientDeleteButton.Click += new System.EventHandler(this.ClientDeleteButton_Click);
             // 
             // toolStripSeparator3
             // 
@@ -528,14 +533,14 @@
             this.UslugaTypeDataGrid.AllowUserToAddRows = false;
             this.UslugaTypeDataGrid.AllowUserToDeleteRows = false;
             this.UslugaTypeDataGrid.BackgroundColor = System.Drawing.Color.Lavender;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.UslugaTypeDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.UslugaTypeDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle27;
             this.UslugaTypeDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.UslugaTypeDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.UslugaTypeDataGrid.Location = new System.Drawing.Point(3, 28);
@@ -587,6 +592,7 @@
             this.UslugaTypeEditButton.Name = "UslugaTypeEditButton";
             this.UslugaTypeEditButton.Size = new System.Drawing.Size(23, 22);
             this.UslugaTypeEditButton.Text = "toolStripButton9";
+            this.UslugaTypeEditButton.Click += new System.EventHandler(this.UslugaTypeEditButton_Click);
             // 
             // UslugaTypeDeleteButton
             // 
@@ -596,6 +602,7 @@
             this.UslugaTypeDeleteButton.Name = "UslugaTypeDeleteButton";
             this.UslugaTypeDeleteButton.Size = new System.Drawing.Size(23, 22);
             this.UslugaTypeDeleteButton.Text = "toolStripButton8";
+            this.UslugaTypeDeleteButton.Click += new System.EventHandler(this.UslugaTypeDeleteButton_Click);
             // 
             // toolStripSeparator4
             // 

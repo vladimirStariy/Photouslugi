@@ -64,13 +64,50 @@ namespace Фотоуслуги
 
         private void MaterialDeleteButton_Click(object sender, EventArgs e)
         {
-            db.DeleteMaterial(Convert.ToInt32(MaterialDataGrid.SelectedRows[0].Cells[0].Value));
+            try
+            {
+                db.DeleteMaterial(Convert.ToInt32(MaterialDataGrid.SelectedRows[0].Cells[0].Value));
+            }
+            catch
+            {
+                MessageBox.Show("Невозможно удалить эту запись.");
+            }
             UpdateTables();
         }
 
         private void MaterialTypeEditButton_Click(object sender, EventArgs e)
         {
+            MaterialTypeForm MTF = new MaterialTypeForm(Convert.ToInt32(MaterialTypeDataGrid.SelectedRows[0].Cells[0].Value), "edit");
+            if (MTF.ShowDialog() == DialogResult.OK)
+            {
+                MaterialTypeDataGrid.DataSource = db.GetMaterialTypes();
+                MaterialTypeDataGrid.Columns[0].Visible = false;
+                MTF.Close();
+            }
+        }
 
+        private void MaterialTypeAddButton_Click(object sender, EventArgs e)
+        {
+            MaterialTypeForm MTF = new MaterialTypeForm(0, "add");
+            if(MTF.ShowDialog() == DialogResult.OK)
+            {
+                MaterialTypeDataGrid.DataSource = db.GetMaterialTypes();
+                MaterialTypeDataGrid.Columns[0].Visible = false;
+                MTF.Close();
+            }
+        }
+
+        private void MaterialTypeDeleteButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                db.DeleteType(Convert.ToInt32(MaterialTypeDataGrid.SelectedRows[0].Cells[0].Value));
+            }
+            catch
+            {
+                MessageBox.Show("Невозможно удалить эту запись.");
+            }
+            UpdateTables();
         }
     }
 }

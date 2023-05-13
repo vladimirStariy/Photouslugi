@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DocumentFormat.OpenXml.Office2010.Excel;
 
 namespace Фотоуслуги.Services
 {
@@ -86,6 +87,14 @@ namespace Фотоуслуги.Services
         {
             string query = $"SELECT Type_Id, TypeName as 'Наименование' " +
                            $"FROM type_material";
+
+            return GetDataTableByQuery(query);
+        }
+        public DataTable GetMaterialTypeById(int id)
+        {
+            string query = $"SELECT * " +
+                           $"FROM type_material " +
+                           $"WHERE Type_Id = {id}";
 
             return GetDataTableByQuery(query);
         }

@@ -93,5 +93,94 @@ namespace Фотоуслуги
                 FOE.Close();
             }
         }
+
+        private void OrderDeleteButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                db.DeleteZakaz(Convert.ToInt32(OrderDataGrid.SelectedRows[0].Cells[0].Value));
+                OrderDataGrid.DataSource = db.GetZakazList();
+                OrderDataGrid.Columns[0].Visible = false;
+            }
+            catch
+            {
+                MessageBox.Show("Невозможно удалить эту запись.");
+            }
+        }
+
+        private void UslugaUpdateButton_Click(object sender, EventArgs e)
+        {
+            UslugaEditor UE = new UslugaEditor(Convert.ToInt32(UslugaDataGrid.SelectedRows[0].Cells[0].Value), "edit");
+            if (UE.ShowDialog() == DialogResult.OK)
+            {
+                UslugaDataGrid.DataSource = db.GetUslugaList();
+                UslugaDataGrid.Columns[0].Visible = false;
+                UE.Close();
+            }
+        }
+
+        private void UslugaDeleteButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                db.DeleteUsluga(Convert.ToInt32(UslugaDataGrid.SelectedRows[0].Cells[0].Value));
+                UslugaDataGrid.DataSource = db.GetUslugaList();
+                UslugaDataGrid.Columns[0].Visible = false;
+            }
+            catch
+            {
+                MessageBox.Show("Невозможно удалить эту запись.");
+            }
+        }
+
+        private void ClientUpdateButton_Click(object sender, EventArgs e)
+        {
+            KlientEditor KE = new KlientEditor(Convert.ToInt32(KlientDataGrid.SelectedRows[0].Cells[0].Value), "edit");
+            if (KE.ShowDialog() == DialogResult.OK)
+            {
+                KlientDataGrid.DataSource = db.GetKlientList();
+                KlientDataGrid.Columns[0].Visible = false;
+                KE.Close();
+            }
+        }
+
+        private void ClientDeleteButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                db.DeleteKlient(Convert.ToInt32(KlientDataGrid.SelectedRows[0].Cells[0].Value));
+                KlientDataGrid.DataSource = db.GetKlientList();
+                KlientDataGrid.Columns[0].Visible = false;
+            }
+            catch
+            {
+                MessageBox.Show("Невозможно удалить эту запись.");
+            }
+        }
+
+        private void UslugaTypeEditButton_Click(object sender, EventArgs e)
+        {
+            UslugaTypeEditor UTE = new UslugaTypeEditor(Convert.ToInt32(UslugaTypeDataGrid.SelectedRows[0].Cells[0].Value), "edit");
+            if (UTE.ShowDialog() == DialogResult.OK)
+            {
+                UslugaTypeDataGrid.DataSource = db.GetUslugaTypes();
+                UslugaTypeDataGrid.Columns[0].Visible = false;
+                UTE.Close();
+            }
+        }
+
+        private void UslugaTypeDeleteButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                db.DeleteUslugaType(Convert.ToInt32(UslugaTypeDataGrid.SelectedRows[0].Cells[0].Value));
+                UslugaTypeDataGrid.DataSource = db.GetUslugaTypes();
+                UslugaTypeDataGrid.Columns[0].Visible = false;
+            }
+            catch
+            {
+                MessageBox.Show("Невозможно удалить эту запись.");
+            }
+        }
     }
 }

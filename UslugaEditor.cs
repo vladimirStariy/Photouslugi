@@ -25,11 +25,25 @@ namespace Фотоуслуги
 
         private void AcceptButton_Click(object sender, EventArgs e)
         {
-            db.CreateUsluga(
-                NameBox.Text,
-                Convert.ToInt32(UslugaTypeBox.SelectedValue),
-                Convert.ToDouble(StoimBox.Text)
-            );
+            if (_mode == "edit")
+            {
+                db.UpdateUsluga(
+                    Usluga_ID,
+                    NameBox.Text,
+                    Convert.ToInt32(UslugaTypeBox.SelectedValue),
+                    Convert.ToDouble(StoimBox.Text)
+                );
+                this.DialogResult = DialogResult.OK;
+            }
+            else
+            { 
+                db.CreateUsluga(
+                    NameBox.Text,
+                    Convert.ToInt32(UslugaTypeBox.SelectedValue),
+                    Convert.ToDouble(StoimBox.Text)
+                );
+                this.DialogResult = DialogResult.OK;
+            }
             this.DialogResult = DialogResult.OK;
         }
 
@@ -38,6 +52,16 @@ namespace Фотоуслуги
             UslugaTypeBox.DataSource = db.GetUslugaTypes();
             UslugaTypeBox.DisplayMember = "Наименование";
             UslugaTypeBox.ValueMember = "UslugaType_Id";
+            if(_mode == "edit")
+            {
+                DataTable dt = db.GetUslugaById(Usluga_ID);
+                foreach (DataRow item in dt.Rows)
+                {
+                    NameBox.Text = item["nazv"].ToString();
+                    UslugaTypeBox.SelectedValue = Convert.ToInt32(item["vid"]);
+                    StoimBox.Text = item["stoim"].ToString();
+                }
+            }
         }
     }
 }

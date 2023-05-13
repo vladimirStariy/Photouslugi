@@ -94,6 +94,7 @@
             this.Controls.Add(this.FamBox);
             this.Name = "KlientEditor";
             this.Text = "KlientEditor";
+            this.Load += new System.EventHandler(this.KlientEditor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

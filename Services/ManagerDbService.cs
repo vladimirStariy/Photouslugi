@@ -43,6 +43,13 @@ namespace Фотоуслуги.Services
                            $"FROM UslugaType";
             return GetDataTableByQuery(query);
         }
+        public DataTable GetUslugaTypeById(int id)
+        {
+            string query = $"SELECT * " +
+                           $"FROM UslugaType " +
+                           $"WHERE UslugaType_Id = {id}";
+            return GetDataTableByQuery(query);
+        }
         public void CreateUslugaType(string name)
         {
             string query = $"INSERT INTO UslugaType VALUES (N'{name}')";
@@ -64,6 +71,13 @@ namespace Фотоуслуги.Services
             string query = $"SELECT id_uslugi, nazv as 'Наименование', UslugaTypeName as 'Тип услуги', stoim as 'Стоимость'" +
                            $"FROM usluga " +
                            $"INNER JOIN UslugaType ON vid = UslugaType_Id";
+            return GetDataTableByQuery(query);
+        }
+        public DataTable GetUslugaById(int id)
+        {
+            string query = $"SELECT * " +
+                           $"FROM usluga " +
+                           $"WHERE id_uslugi = {id}";
             return GetDataTableByQuery(query);
         }
         public void CreateUsluga(string name, int type_id, double price)
@@ -149,6 +163,11 @@ namespace Фотоуслуги.Services
                 else
                     query = $"INSERT INTO zakaz VALUES (GETDATE(), '{datavip.Year}-{datavip.Month}-{datavip.Day}', 0, {sotr_id}, {klient_id})";
             }
+            QueryExec(query);
+        }
+        public void DeleteZakaz(int id)
+        {
+            string query = $"DELETE FROM zakaza WHERE nomer_zakaza = {id}";
             QueryExec(query);
         }
         public int GetWorkerIdByUserId(int user_id)
